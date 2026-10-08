@@ -1,0 +1,198 @@
+{
+  "captured_utc": "2026-10-08T13:34:11.904845+00:00",
+  "capture_stage": "after_core_evaluation",
+  "python": "3.13.15",
+  "packages": {
+    "torch": "2.11.0+cu130",
+    "unsloth": "2026.10.2",
+    "unsloth_zoo": "2026.10.2",
+    "trl": "1.13.0",
+    "transformers": "5.17.0",
+    "peft": "0.21.1",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "datasets": "4.8.5",
+    "matplotlib": "3.10.0",
+    "pandas": "2.2.3",
+    "pyarrow": "23.0.1"
+  },
+  "gpu": "NVIDIA A100-SXM4-40GB, 40960 MiB, 580.82.07",
+  "config_summary": "COMPUTE_TIER=BIGGPU base=unsloth/Qwen3-8B-unsloth-bnb-4bit max_len=1024 seed=42\nSFT saillab/alpaca-vietnamese-cleaned[:2000]  PREF sailor2/sea-ultrafeedback-onpolicy (Vietnamese) train=3500 eval=200\nDPO beta=0.1 lr=5e-06 epochs=1.0 loss=['sigmoid']",
+  "seed": 42,
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "judge_models": [
+    "Skywork/Skywork-Reward-V2-Qwen3-4B",
+    "Skywork/Skywork-Reward-V2-Llama-3.2-3B"
+  ],
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 384
+  },
+  "preference_split": {
+    "train": "94e0d7ad0fea4d3ab79302352bc237ebc9a936d68ec0b065235a2f5358d49df4",
+    "eval": "28d30dc4231c70d432a14c8fb2514fecc9dd00b74737fc1f555be6de4901ef0a"
+  },
+  "weights_included": false,
+  "cost": null,
+  "cached_model_snapshots": {
+    "models--unsloth--Qwen3-8B": [
+      "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb"
+    ],
+    "models--Skywork--Skywork-Reward-V2-Qwen3-4B": [
+      "fd958fef475f323f4e6b195930e3dd918485c668"
+    ],
+    "models--Skywork--Skywork-Reward-V2-Llama-3.2-3B": [
+      "beafe5f2e6a275ce8c556f68f2d82de7fefbc3d8"
+    ],
+    "models--unsloth--Qwen3-8B-unsloth-bnb-4bit": [
+      "62efd7f9d748e394734a7adae2adf96e13a2abc8"
+    ]
+  },
+  "remote_weight_files": {
+    "adapters/dpo/adapter_model.safetensors": {
+      "bytes": 174655536,
+      "sha256": "1c572e379ea76493c5d638b7fea78ed6f16275c1f51e893aeff21bbd87f412ef"
+    },
+    "adapters/sft-mini/adapter_model.safetensors": {
+      "bytes": 174655536,
+      "sha256": "a246a2761b48e9907554b4b52e7e6c7580fafc3e6b9f3b545d1290f38255a843"
+    },
+    "models/sft-merged/model-00001-of-00004.safetensors": {
+      "bytes": 4902257696,
+      "sha256": "1deb3d9d64d9a1c2bb2de1119eed15a4984b8f972abeb2a3e9bc019ee9ffc59c"
+    },
+    "models/sft-merged/model-00002-of-00004.safetensors": {
+      "bytes": 4915960368,
+      "sha256": "a5be6c613ba8c41b86ebc96460502330d3da5553006d179a8a62e394506218d6"
+    },
+    "models/sft-merged/model-00003-of-00004.safetensors": {
+      "bytes": 4983068496,
+      "sha256": "183a763f62165dffda17a9e5fd450447c072deda06338e38955541823bea3e43"
+    },
+    "models/sft-merged/model-00004-of-00004.safetensors": {
+      "bytes": 1580230264,
+      "sha256": "01cce00193f3d9b7e38821279e4723cfc11cb4b52f196ff5a73f71442c1d6959"
+    }
+  },
+  "files": {
+    "adapters/dpo/adapter_config.json": {
+      "bytes": 1324,
+      "sha256": "e509853f5d5d620da7b6954177bb949195b7344ee7d001de905ad2b5e6d1d59a"
+    },
+    "adapters/dpo/dpo_metrics.json": {
+      "bytes": 677,
+      "sha256": "80579805fcf7c35eeeb931ad26f297b291415edd17339a5a2ce987015fb841ce"
+    },
+    "adapters/dpo/final_eval.json": {
+      "bytes": 512,
+      "sha256": "9f4679715e7ee4b1ba504ed4c1bf04d53c8cd685736c9c3aebfdd481249bb414"
+    },
+    "adapters/dpo/split.json": {
+      "bytes": 159,
+      "sha256": "b4e191f3564e0640a894eb43beb81d7fe447d757e73d62ab8f4550d5b15a1632"
+    },
+    "adapters/dpo/tokenizer.json": {
+      "bytes": 11422924,
+      "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+    },
+    "adapters/dpo/tokenizer_config.json": {
+      "bytes": 5129,
+      "sha256": "63c169437eec906c228cde9b2ada6b6540cda90007c7174eb0ce990e8cf0aa12"
+    },
+    "adapters/dpo/training_log.json": {
+      "bytes": 48384,
+      "sha256": "4f854ea1fe285508743efc30fd4f3e342e89d99b4f9f3b0196ec6de12159fb23"
+    },
+    "adapters/sft-mini/adapter_config.json": {
+      "bytes": 1325,
+      "sha256": "87b49c134575ca3afa5d1c80ebe07d99c8fa36a137b0fbf9f2db76d48f3938c4"
+    },
+    "adapters/sft-mini/tokenizer.json": {
+      "bytes": 11422924,
+      "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+    },
+    "adapters/sft-mini/tokenizer_config.json": {
+      "bytes": 5130,
+      "sha256": "d1c413325be7b54aff47239f0177e2527ddf1e6af4f50780fba274a66302f8e0"
+    },
+    "data/eval/judge_results_rm.json": {
+      "bytes": 698767,
+      "sha256": "4a6edcb03fa2438d2d674714bc5552e9567a8aad3a8ef0012463d9f462477043"
+    },
+    "data/eval/judge_summary.json": {
+      "bytes": 3214,
+      "sha256": "cb5b7090897f721eda4407951c555c945ac47d693434b600c7c23d4bdad16d04"
+    },
+    "data/eval/side_by_side.jsonl": {
+      "bytes": 216439,
+      "sha256": "748d2ee75432be2c3ba91f2191df9632e308be573f7d4f2c0f0517855e96833f"
+    },
+    "data/pref/eval.parquet": {
+      "bytes": 652087,
+      "sha256": "28d30dc4231c70d432a14c8fb2514fecc9dd00b74737fc1f555be6de4901ef0a"
+    },
+    "data/pref/stats.json": {
+      "bytes": 192,
+      "sha256": "f09918104352f441b6ff7d397945df7dc54e2a9075a4f9e00df13acf1c59db7b"
+    },
+    "data/pref/train.parquet": {
+      "bytes": 8674640,
+      "sha256": "94e0d7ad0fea4d3ab79302352bc237ebc9a936d68ec0b065235a2f5358d49df4"
+    },
+    "lab22/__init__.py": {
+      "bytes": 69,
+      "sha256": "b1a06a3de267269b144efdbbbe82266890fdc95d08cf513eecc2d0bc0adf3780"
+    },
+    "lab22/config.py": {
+      "bytes": 7460,
+      "sha256": "9478ff5f522ffbc361570f074f444ab97f9b3c402c4eeb847e5b3dc117712c5c"
+    },
+    "lab22/data.py": {
+      "bytes": 7889,
+      "sha256": "4edc6ad995951fc9ebc9bf13a156cda11496cb79b460ae8d97547cc0b86cd259"
+    },
+    "lab22/dpo_math.py": {
+      "bytes": 4018,
+      "sha256": "f39992dcf4922a04f7af3de4fd4ace7f48efb56fd2728ffbb44376056f59e977"
+    },
+    "lab22/judge.py": {
+      "bytes": 17046,
+      "sha256": "d5ae6472b86bc142dbaec5727da30121b25db07985e4dc2561b7fecf92936eae"
+    },
+    "lab22/math_reward.py": {
+      "bytes": 2630,
+      "sha256": "4b87a9e9c91111c0be885dd7376dc008b535c056c1054a7380c03d054471b010"
+    },
+    "lab22/modeling.py": {
+      "bytes": 7570,
+      "sha256": "919811ae7079a0a247c2367456ee5861ceabe7a1fac617222a956eaefeb69d6c"
+    },
+    "submission/screenshots/02-sft-loss.png": {
+      "bytes": 39169,
+      "sha256": "0e4bfe67755a963dd40eb15c81901d6addf5bf9e6ae83a07da1c8c01c20775e6"
+    },
+    "submission/screenshots/02b-pref-length.png": {
+      "bytes": 25519,
+      "sha256": "e0b8005ea0d8e558b8bd968c93c8a827b7f81691297ceccef4cd2e3b87bd1016"
+    },
+    "submission/screenshots/03-dpo-reward-curves.png": {
+      "bytes": 151438,
+      "sha256": "89c04d34760fbae72c32cb1e6385c2da9d1da4606664d09c01b0c73a6c7c9ab5"
+    },
+    "submission/screenshots/04-side-by-side-table.png": {
+      "bytes": 212059,
+      "sha256": "e962f04d88a5ea702bb4500a471da1aeee534c18a11c315f5ef7101538c84ee7"
+    }
+  },
+  "layout_addendum": {
+    "verified_utc": "2026-10-08T13:43:37.989825+00:00",
+    "changed_file": "submission/screenshots/04-side-by-side-table.png",
+    "original_identity": {
+      "bytes": 76310,
+      "sha256": "fb8f91168e5b50529a3f717b27a5f918e2ae2f10274d1856c7e4cf53863ca78d"
+    },
+    "reason": "Wrap table excerpts and size rows to prevent overflow; re-rendered in the same Colab from saved outputs. Model outputs, verdicts and weights unchanged."
+  }
+}

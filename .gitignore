@@ -15,6 +15,12 @@ __pycache__/
 # Lab artifacts: weights stay local. The small evidence files below ARE committed,
 # because the auto-grader reads only what is in the repo.
 models/
+!models/
+models/*
+!models/sft-merged/
+models/sft-merged/*
+!models/sft-merged/config.json
+!models/sft-merged/model.safetensors.index.json
 adapters/*
 !adapters/.gitkeep
 !adapters/*/
@@ -24,8 +30,11 @@ adapters/*/*
 !adapters/*/split.json
 !adapters/*/variants_summary.json
 !adapters/*/grpo_metrics.json
+!adapters/dpo/training_log.json
+!adapters/dpo/final_eval.json
 data/pref/*
 !data/pref/*.parquet
+!data/pref/stats.json
 data/eval/*
 !data/eval/*.json
 !data/eval/*.jsonl
@@ -49,3 +58,10 @@ hf_cache/
 .idea/
 .vscode/
 *.swp
+
+# Local raw evidence/scratch: publish the curated submission and provenance only.
+docs/harness/scratch/
+docs/harness/colab-run-20261008/
+docs/harness/*.zip
+docs/harness/*.gz
+docs/harness/reflection-before-completion.md

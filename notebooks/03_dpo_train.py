@@ -139,6 +139,8 @@ metrics = {
     "diagnosis": label,
 }
 (C.DPO_ADAPTER / "dpo_metrics.json").write_text(json.dumps(metrics, indent=2))
+(C.DPO_ADAPTER / "training_log.json").write_text(json.dumps(trainer.state.log_history, indent=2))
+(C.DPO_ADAPTER / "final_eval.json").write_text(json.dumps(final_eval, indent=2))
 print(json.dumps(metrics, indent=2))
 
 # %% [markdown]

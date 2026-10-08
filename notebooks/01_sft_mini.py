@@ -103,6 +103,10 @@ trainer = train_on_responses_only(
     instruction_part="<|im_start|>user\n",
     response_part="<|im_start|>assistant\n",
 )
+supervised_counts = [sum(label != -100 for label in row["labels"]) for row in trainer.train_dataset]
+assert supervised_counts and min(supervised_counts) > 0, "SFT contains examples with no response targets after masking"
+assert any(label == -100 for label in trainer.train_dataset[0]["labels"]), "Expected masked prompt tokens"
+print(f"SFT mask check: {len(supervised_counts)} examples, min response targets={min(supervised_counts)}")
 result = trainer.train()
 print(f"Final SFT loss: {result.training_loss:.4f}")
 

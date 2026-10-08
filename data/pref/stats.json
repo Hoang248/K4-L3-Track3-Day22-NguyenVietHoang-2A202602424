@@ -1,0 +1,8 @@
+{
+  "dataset": "sailor2/sea-ultrafeedback-onpolicy",
+  "language": "Vietnamese",
+  "n": 2551,
+  "chosen_median": 224.0,
+  "rejected_median": 154.0,
+  "chosen_longer_frac": 0.6507252058016464
+}
